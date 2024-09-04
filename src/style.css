@@ -87,6 +87,30 @@ a {
   width: 200px;
 }
 
+/* REGION */
+.region-list {
+  padding: 30px 12%;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--regular);
+  flex-wrap: wrap; /* Add flex-wrap for responsive */
+}
+
+.region-list div {
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--gray);
+}
+
+.region-list div:hover {
+  background-color: var(--light-gray);
+}
+
+.region-list .clicked {
+  background-color: var(--light-gray);
+}
+
 /* CITY LIST */
 .city-list {
   padding: 15px 12%;
