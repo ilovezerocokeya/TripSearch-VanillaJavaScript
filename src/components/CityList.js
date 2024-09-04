@@ -1,9 +1,14 @@
-//CityList.js
-export default function CityList({ $app, initialState, handleLoadMore }) {
+export default function CityList({
+  $app,
+  initialState,
+  handleItemClick,
+  handleLoadMore,
+}) {
   this.state = initialState;
   this.$target = document.createElement("div");
   this.$target.className = "city-list";
 
+  this.handleItemClick = handleItemClick;
   this.handleLoadMore = handleLoadMore;
 
   $app.appendChild(this.$target);
@@ -27,6 +32,11 @@ export default function CityList({ $app, initialState, handleLoadMore }) {
 
   this.render = () => {
     this.$target.innerHTML = this.template();
+    this.$target.querySelectorAll("div.city-item").forEach((elm) => {
+      elm.addEventListener("click", () => {
+        this.handleItemClick(elm.id);
+      });
+    });
 
     if (!this.state.isEnd) {
       const $loadMoreButton = document.createElement("button");
