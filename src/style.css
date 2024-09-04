@@ -35,6 +35,58 @@ a {
   text-decoration: none;
   color: black;
 }
+
+/* HEADER */
+.header {
+  padding: 25px 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.header .title {
+  font-size: var(--large);
+  font-weight: 600;
+}
+
+.header .filter-search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-search-container div {
+  margin-left: 10px;
+}
+
+.sort-list {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: var(--small);
+  color: var(--gray);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.styled-select:hover {
+  background-color: #efefef;
+}
+
+.search input {
+  padding: 10px 20px;
+  font-size: var(--small);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
 /* CITY LIST */
 .city-list {
   padding: 15px 12%;
